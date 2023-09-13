@@ -14,14 +14,14 @@ var (
 )
 
 func main() {
-	err := saml2aws_do_login()
+	err := Saml2aws_do_login()
 	if err != nil {
 		log.Println("There was an error authenticating to AWS")
 		log.Printf(errtpl, err)
 	}
 }
 
-func saml2aws_do_login() (err error) {
+func Saml2aws_do_login() (err error) {
 	loginFlags := new(flags.LoginExecFlags)
 	commonFlags := new(flags.CommonFlags)
 	commonFlags.IdpAccount = "default"
