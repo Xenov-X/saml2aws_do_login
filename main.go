@@ -1,8 +1,6 @@
-package main
+package saml2aws_do_login
 
 import (
-	"log"
-
 	"github.com/versent/saml2aws/v2/cmd/saml2aws/commands"
 	"github.com/versent/saml2aws/v2/pkg/flags"
 )
@@ -13,13 +11,13 @@ var (
 	errtpl  = "%v\n"
 )
 
-func main() {
-	err := Saml2aws_do_login()
-	if err != nil {
-		log.Println("There was an error authenticating to AWS")
-		log.Printf(errtpl, err)
-	}
-}
+// func example() {
+// 	err := Saml2aws_do_login()
+// 	if err != nil {
+// 		log.Println("There was an error authenticating to AWS")
+// 		log.Printf(errtpl, err)
+// 	}
+// }
 
 func Saml2aws_do_login() (err error) {
 	loginFlags := new(flags.LoginExecFlags)
